@@ -10,6 +10,6 @@ jobs:
     steps:
       - 
         name: echo name
-        run: exho "Youssef Said"
+        run: echo "Youssef Said"
 
 
