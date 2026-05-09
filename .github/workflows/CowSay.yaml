@@ -6,21 +6,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - 
-        name: install cowsay program
-        run: sudo apt-get install cowsay -y
+        name: Checkout
+        uses: actions/checkout@v6.0.2
 
       -
-        name: Execute cowsay CMD
-        run: cowsay -f dragon "Run for cover, iam a Dragon....RAWR" >> dragon.txt
+        name: run script
+        run: |
+          chmod +x cowsay.sh
+          ./cowsay.sh
       
-      -
-        name: Test File Exists
-        run: grep -i "dragon" dragon.txt
-
-      -
-        name: Read File
-        run: cat dragon.txt
-
-      -
-        name: checkout repo files 
-        run: ls
+   
